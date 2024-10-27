@@ -2,7 +2,13 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { spawn } from 'child_process';
 
-export async function POST(request: NextRequest) {
+interface PredictionResult {
+  probability: number;
+  risk_level: string;
+  debug_info?: unknown;
+}
+
+export async function POST(request: NextRequest): Promise<Response> {
   try {
     const data = await request.json();
     
@@ -23,8 +29,8 @@ export async function POST(request: NextRequest) {
       1, // thal (default)
     ];
 
-    // Call Python script for prediction
-    return new Promise((resolve) => {
+    // Create a properly typed Promise that returns Response
+    const predictionResponse: Promise<Response> = new Promise((resolve) => {
       const pythonProcess = spawn('python', [
         'predict.py',
         JSON.stringify(inputArray)
@@ -42,19 +48,28 @@ export async function POST(request: NextRequest) {
 
       pythonProcess.on('close', (code) => {
         if (code !== 0) {
-          resolve(NextResponse.json({ error: 'Prediction failed' }, { status: 500 }));
+          resolve(NextResponse.json(
+            { error: 'Prediction failed' }, 
+            { status: 500 }
+          ));
           return;
         }
 
         try {
-          const prediction = JSON.parse(result);
+          const prediction = JSON.parse(result) as PredictionResult;
           resolve(NextResponse.json(prediction));
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (e) {
-          resolve(NextResponse.json({ error: 'Invalid prediction result' }, { status: 500 }));
+          resolve(NextResponse.json(
+            { error: 'Invalid prediction result' }, 
+            { status: 500 }
+          ));
         }
       });
     });
+
+    return await predictionResponse;
+
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return NextResponse.json(
@@ -63,3 +78,7 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+// Ensure the route exports meet Next.js requirements
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
