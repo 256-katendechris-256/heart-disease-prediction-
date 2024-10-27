@@ -217,7 +217,8 @@ The application includes comprehensive error handling:
 4. Push to the branch
 5. Create a Pull Request
 6. 
-![image](https://github.com/user-attachments/assets/3feced07-9755-467c-afdd-bc7e99e43fa2)
+ ![image](https://github.com/user-attachments/assets/dfbc3d7d-1b1a-4d40-8834-e6d65638bc6a)
+
 
  ![image](https://github.com/user-attachments/assets/3e3fb841-09ae-4779-9b29-d00a63647812)
 
