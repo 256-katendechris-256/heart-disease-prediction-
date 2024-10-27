@@ -216,6 +216,16 @@ The application includes comprehensive error handling:
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+6. 
+![image](https://github.com/user-attachments/assets/3feced07-9755-467c-afdd-bc7e99e43fa2)
 
  ![image](https://github.com/user-attachments/assets/3e3fb841-09ae-4779-9b29-d00a63647812)
+
+![image](https://github.com/user-attachments/assets/812ca513-d39c-401e-b1ab-ab2c07b5045b)
+
+![image](https://github.com/user-attachments/assets/fdb314f9-e78b-4472-a588-ec44b13308ae)
+
+![image](https://github.com/user-attachments/assets/a0db680c-6a27-45b8-b564-85c2ddde03ba)
+
+
 
