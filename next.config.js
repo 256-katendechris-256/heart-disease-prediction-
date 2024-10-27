@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',  // Changed from 'standalone' to 'export'
+    output: 'export',
     images: {
       unoptimized: true
     },
-    distDir: '.next'  // Explicitly set the build directory
+    
+    env: {
+      NEXT_PUBLIC_BASE_URL: process.env.NODE_ENV === 'production' 
+        ? 'https://katende-heart-prediction.web.app'  // Replace with your Firebase URL
+        : 'http://localhost:3000'
+    }
   }
   
   module.exports = nextConfig
