@@ -159,7 +159,7 @@ const HeartDiseaseForm = () => {
                   max="120"
                   value={formData.age}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
+                  className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black bg-white px-3 py-2 hover:border-gray-600 transition-colors duration-200"
                 />
               </div>
 
@@ -172,7 +172,7 @@ const HeartDiseaseForm = () => {
                   id="sex"
                   value={formData.sex}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
+                  className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black bg-white px-3 py-2 hover:border-gray-600 transition-colors duration-200"
                 >
                   <option value="1">Male</option>
                   <option value="0">Female</option>
@@ -193,7 +193,7 @@ const HeartDiseaseForm = () => {
                   max="300"
                   value={formData.trestbps}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
+                  className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black bg-white px-3 py-2 hover:border-gray-600 transition-colors duration-200"
                 />
               </div>
 
@@ -210,75 +210,10 @@ const HeartDiseaseForm = () => {
                   max="600"
                   value={formData.chol}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
+                  className="mt-1 block w-full rounded-md border-2 border-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black bg-white px-3 py-2 hover:border-gray-600 transition-colors duration-200"
                 />
               </div>
 
-              <div>
-                <label htmlFor="thalach" className="block text-sm font-medium text-gray-700">
-                  Maximum Heart Rate
-                </label>
-                <input
-                  type="number"
-                  name="thalach"
-                  id="thalach"
-                  required
-                  min="0"
-                  max="300"
-                  value={formData.thalach}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
-                />
-              </div>
-
-              {/* <div>
-                <label htmlFor="oldpeak" className="block text-sm font-medium text-gray-700">
-                  ST Depression
-                </label>
-                <input
-                  type="number"
-                  name="oldpeak"
-                  id="oldpeak"
-                  step="0.1"
-                  required
-                  value={formData.oldpeak}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
-                />
-              </div> */}
-
-              {/* Additional Parameters */}
-              {/* <div>
-                <label htmlFor="fbs" className="block text-sm font-medium text-gray-700">
-                  Fasting Blood Sugar {'>'} 120 mg/dl
-                </label>
-                <select
-                  name="fbs"
-                  id="fbs"
-                  value={formData.fbs}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
-                >
-                  <option value="0">No</option>
-                  <option value="1">Yes</option>
-                </select>
-              </div> */}
-
-              <div>
-                <label htmlFor="exang" className="block text-sm font-medium text-gray-700">
-                  Exercise Induced Angina
-                </label>
-                <select
-                  name="exang"
-                  id="exang"
-                  value={formData.exang}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-black"
-                >
-                  <option value="0">No</option>
-                  <option value="1">Yes</option>
-                </select>
-              </div>
             </div>
 
             <div className="mt-6">
