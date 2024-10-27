@@ -1,4 +1,4 @@
-# Heart Disease Risk Prediction Application
+# Heart Disease Risk Prediction Application(KATENDE CHRIS MARVIN)
 
 A web-based application that predicts heart disease risk using machine learning, built with Next.js and Python Flask.
 
